@@ -16,7 +16,20 @@ Write JavaScript below that logs:
 
 */
 const list=document.querySelectorAll("p")
-console.log(list);
+// console.log(list);
+
+const div= document.querySelectorAll("div")
+const firstDiv= div[0]
+// console.log(firstDiv);
+
+const jumbotron = document.querySelectorAll("#jumbotron-text");
+// console.log(jumbotron);
+
+const primary= document.querySelectorAll(".primary-content p")
+console.log(primary);
+
+
+
 
 /*
 Task 2
@@ -24,7 +37,12 @@ Task 2
 
 When a user clicks the 'ALERT' button, an alert box should pop up with the text "Thanks for visiting Bikes for Refugees!"
 */
+let myButton = document.querySelector("#alertBtn");
+myButton.addEventListener("click", alertSomething);
 
+function alertSomething() {
+  alert("Thanks for visiting Bikes for Refugees");
+}
 
 /*
 Task 3
