@@ -50,16 +50,27 @@ Task 3
 
 Write JavaScript below that changes the background colour of the page when the 'Change colour' button is clicked.
 */
+let changeBtn = document.querySelector("#bgrChangeBtn");
+changeBtn.addEventListener("click", changeColor);
 
-
+function changeColor(){
+    let body = document.querySelector("body");
+    body.style.backgroundColor = "#abceeb";
+}
 /*
 Task 4
 ======
 
 When a user clicks the ‘Add some text’ button, a new paragraph should be added inside the section that says “LEARN MORE”
 */
+const newParrafo = document.querySelector("#addTextBtn");
+newParrafo.addEventListener("click", masInf);
 
-
+function masInf(){
+    const parrafoN = document.createElement ("p");
+    mainArticles.appendChild (parrafoN);
+    parrafoN.innerText = ("New paragrap");
+}
 
 /*
 Task 5
@@ -67,8 +78,14 @@ Task 5
 
 When the 'Larger links!' button is clicked, the text of all links on the page should increase.
 */
+const button = document.querySelector("#largerLinksBtn");
+button.addEventListener("click", aumentarLink);
 
+function aumentarLink() {
+    const links= document.querySelectorAll("a")
+    links.forEach(link=>link.style.fontSize="x-large")
 
+}
 /*
 Task 6
 ======
