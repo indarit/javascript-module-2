@@ -15,7 +15,8 @@ Write JavaScript below that logs:
     --> should log a list of nodes with a length of 3
 
 */
-
+const list=document.querySelectorAll("p")
+console.log(list);
 
 /*
 Task 2
