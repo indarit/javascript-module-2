@@ -63,14 +63,17 @@ Task 4
 
 When a user clicks the ‘Add some text’ button, a new paragraph should be added inside the section that says “LEARN MORE”
 */
-const newParrafo = document.querySelector("#addTextBtn");
-newParrafo.addEventListener("click", masInf);
+const mainArticles= document.querySelector("#mainArticles")
+const addTextBtn = document.querySelector("#addTextBtn")
+addTextBtn.addEventListener("click", addParagraph)
 
-function masInf(){
-    const parrafoN = document.createElement ("p");
-    mainArticles.appendChild (parrafoN);
-    parrafoN.innerText = ("New paragrap");
+
+function addParagraph(btn){
+const p= document.createElement("p")
+p.innerText="Nuevo Parrafo"
+mainArticles.appendChild(p)
 }
+
 
 /*
 Task 5
@@ -94,6 +97,22 @@ Using the same function in Task 4,
 When the 'Add' button is clicked, get the text inside the input field and create a new paragraph in the "LEARN MORE" section
 Also clear the text inside the input field
 */
+const addArticleBtn= document.querySelector("#addArticleBtn") 
+// obtener el input
+const inputAddArticle = document.querySelector(".addArticle")
+// agregar evento al boton
+addArticleBtn.addEventListener("click",addParagraph2);
+// tomar el texto del input
+// añadir a mainArticles un parrafo
+// limpiar el input 
+
+function addParagraph2(){
+    const p= document.createElement("p")
+    p.innerText= inputAddArticle.value
+    mainArticles.appendChild(p)
+    inputAddArticle.value=""
+}
+
 
 /*
 Task 7
