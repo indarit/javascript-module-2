@@ -78,21 +78,17 @@ mainArticles.appendChild(p)
 /*
 Task 5
 ======
-
 When the 'Larger links!' button is clicked, the text of all links on the page should increase.
 */
 const button = document.querySelector("#largerLinksBtn");
 button.addEventListener("click", aumentarLink);
-
 function aumentarLink() {
     const links= document.querySelectorAll("a")
     links.forEach(link=>link.style.fontSize="x-large")
-
 }
 /*
 Task 6
 ======
-
 Using the same function in Task 4,
 When the 'Add' button is clicked, get the text inside the input field and create a new paragraph in the "LEARN MORE" section
 Also clear the text inside the input field
@@ -113,7 +109,6 @@ function addParagraph2(){
     inputAddArticle.value=""
 }
 
-
 /*
 Task 7
 ======
@@ -122,4 +117,14 @@ Create an array of 5 different colors.
 Using the same function in Task 3, every time the 'Change colour' button is clicked, the background color will be changed with the next color in the array.
 The next color when you are in the last color of the array will be the first color again.
 */
-
+let arrayColor = ["lightblue","darkseagreen","lightpink","lightseagreen","pink"]
+let count=0
+function changeColor(){
+    let body = document.querySelector("body");
+    body.style.backgroundColor = arrayColor[count];
+   if (count < 5){
+        count ++;
+    } else {
+        count = 0;
+    }
+}
