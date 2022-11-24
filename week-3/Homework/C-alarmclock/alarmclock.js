@@ -1,4 +1,10 @@
-function setAlarm() {}
+function setAlarm() {
+  const reloj = document.querySelector("#alarmSet");
+  const seconds = parseInt(reloj.value);
+  const miliseconds = seconds * 1000.0;
+
+  setTimeout(playAlarm, miliseconds);
+}
 
 // DO NOT EDIT BELOW HERE
 

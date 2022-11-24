@@ -15,6 +15,14 @@
  */
 function exerciseOne(arrayOfPeople) {
   let content = document.querySelector("#content");
+  arrayOfPeople.forEach(element => {
+          const newH1 = document.createElement("h1")
+    const newH2 = document.createElement("h2")
+    newH1.innerHTML=element.name
+    newH2.innerHTML=element.job
+    content.appendChild(newH1)
+    content.appendChild(newH2)
+  });
 }
 
 /**
@@ -24,8 +32,17 @@ function exerciseOne(arrayOfPeople) {
  * All of your HTML should go inside the Div tag with the id "content".
  *
  */
-function exerciseTwo(shopping) {
   //Write your code in here
+
+function exerciseTwo(shopping) {
+ let content = document.querySelector("#content");
+  arrayOfshopping.forEach(element => {
+    const lista = document.createElement("ul");
+    const objetos= document.createElement("li");
+          objetos.innerHTML=shopping;
+   lista.appendChild(lista)
+   
+    
 }
 
 /**
@@ -59,8 +76,13 @@ function exerciseTwo(shopping) {
 **/
 function exerciseThree(books) {
   //Write your code in here
-}
-
+ let content= document.querySelector("#content");
+  books.forEach(element => {
+    const listalibros = document.createElement("ul");
+    const objetos= document.createElement("li");
+          objetos.innerHTML=shopping;
+   lista.appendChild(lista)
+  }
 //
 //
 //
